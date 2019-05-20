@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 
 public class ShoppingBasket {
 
-    ItemRepository repository;
+    private ItemRepository repository;
 
     public ShoppingBasket() {
         repository = ItemRepository.INSTANCE.getInstance();
@@ -16,10 +16,14 @@ public class ShoppingBasket {
     public double computePrice(List<String> list) {
         double sum = 0;
         Map<String, Long> purchasedItems =
-                list.stream().collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+                list.stream()
+                        .map(i -> i.trim())
+                        .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+
         for (Map.Entry<String, Long> purchasedItem : purchasedItems.entrySet()) {
             Item item = repository.items.get(purchasedItem.getKey());
-
+            if(item == null)
+                System.out.println("Item "+ purchasedItem.getKey()+" was not found in repository");
             sum += item.calculatePrice(purchasedItem.getValue());
         }
         return sum;

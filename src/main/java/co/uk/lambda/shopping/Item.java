@@ -24,30 +24,6 @@ public class Item {
         this.offer = offer;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    public Offer getOffer() {
-        return offer;
-    }
-
-    public void setOffer(Offer offer) {
-        this.offer = offer;
-    }
-
     public double calculatePrice(Long quantity) {
         switch (this.offer) {
             case BUY_ONE_GET_ONE_FREE:
