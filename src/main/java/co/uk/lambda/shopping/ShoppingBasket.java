@@ -26,6 +26,6 @@ public class ShoppingBasket {
                 System.out.println("Item "+ purchasedItem.getKey()+" was not found in repository");
             sum += item.calculatePrice(purchasedItem.getValue());
         }
-        return sum;
+        return sum / 100; //convert to pound
     }
 }

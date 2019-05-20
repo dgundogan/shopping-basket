@@ -12,8 +12,7 @@ public class Application {
         Scanner sc = new Scanner(System.in);
         while (sc.hasNextLine()) {
             String input = sc.nextLine();
-            System.out.format("Total Price : %.2f pound",
-                    basket.computePrice(Arrays.asList(input.split(","))) / 100);
+            System.out.format("Total Price : %.2f pound", basket.computePrice(Arrays.asList(input.split(","))));
         }
 
         sc.close();
