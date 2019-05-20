@@ -39,7 +39,7 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>co.uk.lambda.shopping.App</mainClass>
+                            <mainClass>co.uk.lambda.shopping.Application</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
