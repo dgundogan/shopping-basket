@@ -10,24 +10,24 @@ public class ItemTest {
     @Test
     public void givenNoneOffer_whenCallCalculatePrice_thenReturnsPrice() {
 
-        item = new Item("Apple", 0.35);
+        item = new Item("Apple", 35);
 
-        Assert.assertTrue(3.5 == item.calculatePrice(10L));
+        Assert.assertTrue(350 == item.calculatePrice(10L));
     }
 
     @Test
     public void givenBuyOneGetOneFreeOffer_whenCallCalculatePrice_thenReturnsPrice() {
 
-        item = new Item("Melons", 0.5, Item.Offer.BUY_ONE_GET_ONE_FREE);
+        item = new Item("Melons", 50, Item.Offer.BUY_ONE_GET_ONE_FREE);
 
-        Assert.assertTrue(2.5 == item.calculatePrice(10L));
+        Assert.assertTrue(250 == item.calculatePrice(10L));
     }
 
     @Test
     public void givenBuyThreeForTwoFreeOffer_whenCallCalculatePrice_thenReturnsPrice() {
 
-        item = new Item("Limes", 0.15, Item.Offer.THREE_FOR_TWO);
+        item = new Item("Limes", 15, Item.Offer.THREE_FOR_TWO);
 
-        Assert.assertTrue(1.05 == item.calculatePrice(10L));
+        Assert.assertTrue(105 == item.calculatePrice(10L));
     }
 }

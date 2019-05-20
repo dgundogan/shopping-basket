@@ -11,10 +11,10 @@ public enum ItemRepository {
 
     ItemRepository() {
         items = new HashMap<>();
-        items.put("Apple", new Item("Apple", 0.35));
-        items.put("Banana", new Item("Banana", 0.2));
-        items.put("Melon", new Item("Melon", 0.5, Item.Offer.BUY_ONE_GET_ONE_FREE));
-        items.put("Lime", new Item("Lime", 0.15, Item.Offer.THREE_FOR_TWO));
+        items.put("Apple", new Item("Apple", 35));
+        items.put("Banana", new Item("Banana", 20));
+        items.put("Melon", new Item("Melon", 50, Item.Offer.BUY_ONE_GET_ONE_FREE));
+        items.put("Lime", new Item("Lime", 15, Item.Offer.THREE_FOR_TWO));
     }
 
     public ItemRepository getInstance() {
