@@ -12,7 +12,7 @@ public class ItemTest {
 
         item = new Item("Apple", 35);
 
-        Assert.assertTrue(350.0 == item.calculatePrice(10L));
+        Assert.assertEquals(350, item.calculatePrice(10L), 0);
     }
 
     @Test
@@ -20,7 +20,7 @@ public class ItemTest {
 
         item = new Item("Melons", 50, Item.Offer.BUY_ONE_GET_ONE_FREE);
 
-        Assert.assertTrue(250.0 == item.calculatePrice(10L));
+        Assert.assertEquals(250, item.calculatePrice(10L), 0);
     }
 
     @Test
@@ -28,6 +28,6 @@ public class ItemTest {
 
         item = new Item("Limes", 15, Item.Offer.THREE_FOR_TWO);
 
-        Assert.assertTrue(105.0 == item.calculatePrice(10L));
+        Assert.assertEquals(105, item.calculatePrice(10L), 0);
     }
 }

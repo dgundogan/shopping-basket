@@ -17,16 +17,16 @@ public class ShoppingBasketTest {
 
     @Test
     public void givenArray1_whenCallComputePrice_thenReturnsPrice() {
-        Assert.assertTrue( 0.90 == basket.computePrice(Arrays.asList("Apple", "Apple", "Banana")));
+        Assert.assertEquals(0.90, basket.computePrice(Arrays.asList("Apple", "Apple", "Banana")), 0);
     }
 
     @Test
     public void givenArray2_whenCallComputePrice_thenReturnsPrice() {
-        Assert.assertTrue( 2.55 == basket.computePrice(Arrays.asList("Apple", "Apple", "Banana","Banana","Melon","Melon","Melon","Lime","Lime","Lime","Lime")));
+        Assert.assertEquals(2.55, basket.computePrice(Arrays.asList("Apple", "Apple", "Banana", "Banana", "Melon", "Melon", "Melon", "Lime", "Lime", "Lime", "Lime")), 0);
     }
 
     @Test
     public void givenArrayWithSpace_whenCallComputePrice_thenReturnsPrice() {
-        Assert.assertTrue( 1.55 == basket.computePrice(Arrays.asList("Apple", " Apple", " Banana"," Melon ","Lime ")));
+        Assert.assertEquals(1.55, basket.computePrice(Arrays.asList("Apple", " Apple", " Banana", " Melon ", "Lime ")), 0);
     }
 }
